@@ -1,0 +1,16 @@
+<%-include('header')%>
+    <div class="container">
+     <form action="/passwordcategory/edit/" method="POST">
+      <input type="hidden" name="id" value="<%=id%>">
+      <div class="col-md-4">
+       
+        <div class="form-group">
+          <label for="username">Edit Category:</label><br/>
+          <input type="text" class="form-control" id=editcategory" name="editcategory" value="<%=records.password_category%>"
+            placeholder="Enter Your password Category Nmae">
+      </div>
+      <input type="submit" value="Edit_Category" class="btn btn-primary"/>   
+      </div>
+    </form>   
+  </div>
+  <%-include('footer')%>

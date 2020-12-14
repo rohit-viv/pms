@@ -1,0 +1,30 @@
+<%- include('header')%>
+    <div class="container">
+      <div><h3>Add New Category</h3></div>
+     
+     <form action="/addNewCategory" method="POST">
+      <div class="col-md-4">
+       
+        <div class="form-group">
+          <% if(errors !='') { %>
+            <p style="color: red; font-size: 25px;"><%= errors.addcateary.msg %></p>
+            <% } %>
+            <% if(success !='') { %>
+              <p style="color:green; font-size: 20px;"><%= success %></p>
+              <% } %>
+          <label for="username">Add Category:</label><br/>
+          <input type="text" class="form-control" id="addcateary" name="addcateary" placeholder="Enter Your password Category Nmae">
+      </div>
+      <input type="submit" value="Add_Category" class="btn btn-primary"/>
+      <div>
+        <span><a href="/passwordcategory">View all Category List</a>
+      </div>
+     
+      </div></span>
+     
+           
+    </form>
+     
+          </div>
+          <%- include('footer')%>
+        

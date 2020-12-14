@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+</head>
+
+<body>
+    
+    <div class="container">
+      <h1>Signup Form: </h1>
+      <% if(msg !=''){ %>
+       <p><%= msg %></p> 
+       <% } %>
+     <form action="/userapi/signup" method="POST">
+      <div class="col-md-4">
+        <div class="form-group">
+            
+          <label for="username">User Name:</label><br/>
+          <input type="text" class="form-control" id="name" name="uname" placeholder="Enter user Nmae" required="required"
+      </div>
+      <div class="form-group">
+            
+        <label for="email">Email:</label><br/>
+        <input type="text" class="form-control" id="email" name="email" placeholder="Enter Email" required="required">
+    </div>
+   
+        <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="pass" name="password" placeholder="Enter Password" required="required">
+      </div>
+      <div class="form-group">
+        <label for="confpassword">Confirm Password:</label>
+        <input type="password" class="form-control" id="confpassword"  name="confpassword" placeholder="Enter Confirm Password" required="required">
+      </div>
+      <input type="submit" value="SignUp" class="btn btn-primary"/>
+      <div>
+        <span><a href="/">Login Here</a>
+      </div>
+      </div>
+           
+    </form>
+     
+          </div>
+        </body>
+        </html>
+
